@@ -2,7 +2,7 @@ from day5_task import calculator
 from day3_loginsystem import login_system
 from day3_loginsystem import register_user
 from day4_1block import process_shopping_list
-
+from file_login_system import register_user, login_user
 
 def main_menu():
     while True:
@@ -25,10 +25,13 @@ def main_menu():
             process_shopping_list(user_input)
         elif choice == "3":
             print("\n-- Login System --")
-            username  = input("Enter username:")
-            password = input("Enter password:")
-            result = login_system(username, password)
-            print(result)
+            action = input("Type 'login' or 'register'").lower()
+            if action == "login":
+                login_user()
+            elif action == "register":
+                register_user()
+            else:
+                print("Unknown action.")
         elif choice == "4":
             print("Thanks Bye")
             break

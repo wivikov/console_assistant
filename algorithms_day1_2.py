@@ -15,11 +15,11 @@ print("Sum from 1 to", n, "is:", total)
 #checking for prime number
 nums = int(input("Enter number:"))
 is_prime = True
-if num < 2:
+if nums < 2:
     is_prime=False
 else:
     for i in range(2, int(nums**0.5)+1):
-        if num % i == 0:
+        if nums % i == 0:
             is_prime = False
             break
 if is_prime:

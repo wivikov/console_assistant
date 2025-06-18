@@ -36,8 +36,8 @@ rules_www = input("Do you keep our rules yes/no").strip().lower()
 if age_www >= 18 and rules_www == "yes":
     print(f"Access granted. Welcome, {login}!")
 elif age_www >= 18 and rules_www != "yes":
-    print("Access denied: you must be at least 18 years old.")
+    print("Access denied: you must agree to the rules.")
 elif age_www <= 18:
-    print("Access denied: you must be at 18 years old.")
+    print("Access denied: you must be at least 18 years old.")
 
 
